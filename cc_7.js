@@ -46,3 +46,13 @@ function calculateShippingCost(weight, location, expedited = false) {
 // Testing the function
 console.log(calculateShippingCost(10, "USA", true));  
 console.log(calculateShippingCost(5, "Canada", false)); 
+
+// Task 5: Returning Values
+// Writing a function that returns total interest
+function calculateLoanInterest(principal, rate, years) {
+    let loanInterest = principal * rate * years;
+    console.log(`Total Interest: $${loanInterest.toFixed(2)}`);
+}
+// Testing the function 
+calculateLoanInterest(1000, 0.05, 3);
+calculateLoanInterest(5000, 0.07, 5); 
