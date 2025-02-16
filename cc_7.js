@@ -28,3 +28,21 @@ const calculateLoyaltyDiscount = (amount, years) => {
 // Testing the function
 console.log(calculateLoyaltyDiscount(100, 6));  
 console.log(calculateLoyaltyDiscount(200, 2)); 
+
+// Test 4: Parameters and Arguments
+// Writing a function to calculate shipping fees
+function calculateShippingCost(weight, location, expedited = false) {
+    const rates = {
+        USA: {baseCost: 5, costPerLb: 0.5},
+        Canada: {baseCost: 10, costPerLb: 0.7}
+    };
+    const {baseCost, costPerLb} = rates[location];
+    let shippingCost = baseCost + (costPerLb * weight);
+    if (expedited) {
+        shippingCost += 10;
+    }
+    return `Shipping Cost: $${shippingCost.toFixed(2)}`;
+}
+// Testing the function
+console.log(calculateShippingCost(10, "USA", true));  
+console.log(calculateShippingCost(5, "Canada", false)); 
