@@ -65,3 +65,17 @@ function filterHighValueTransactions(transactions, filterFunction) {
 // Testing the function 
 let transactions = [500, 1200, 3000, 800, 2200];
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000));
+
+// Task 7: Closures
+// Writing a function that returns another function to add expenses and keep a running balance
+function createBudgetTracker() {
+    let balance = 0;
+    return function(expense) {
+        balance -= expense;
+        console.log(`Current Balance: $${balance}`);
+    };
+}
+// Testing the function 
+let budget = createBudgetTracker();
+budget(300); 
+budget(200); 
