@@ -56,3 +56,12 @@ function calculateLoanInterest(principal, rate, years) {
 // Testing the function 
 calculateLoanInterest(1000, 0.05, 3);
 calculateLoanInterest(5000, 0.07, 5); 
+
+// Task 6: Higher-Order Functions
+// Writing a higher-order function that filters transactions above $1000
+function filterHighValueTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);
+}
+// Testing the function 
+let transactions = [500, 1200, 3000, 800, 2200];
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000));
