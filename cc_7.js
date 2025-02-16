@@ -17,3 +17,14 @@ function calculateHourlyWage(salary, hoursPerWeek) {
 // Testing the function
 calculateHourlyWage(52000, 40); 
 calculateHourlyWage(75000, 35); 
+
+// Task 3: Arrow Function
+// Writing an arrow function that applies a discount
+const calculateLoyaltyDiscount = (amount, years) => {
+    const discountRate = years >= 5 ? 0.15 : years >= 3 ? 0.10 : 0.05;
+    const discountedPrice = (amount * (1 - discountRate)).toFixed(2);
+    return `Discounted Price: $${discountedPrice}`;
+};
+// Testing the function
+console.log(calculateLoyaltyDiscount(100, 6));  
+console.log(calculateLoyaltyDiscount(200, 2)); 
